@@ -9,6 +9,10 @@ export class AppComponent implements OnInit{
   title = 'RegistroDeNotass';
   user = ""
   pass = ""
+  users = ""
+  imagePath: string = 'https://img.icons8.com/ios/50/000000/username.png'
+  imagePass: string = 'https://img.icons8.com/ios/50/000000/lock-orientation.png'
+
   constructor(){}
   ngOnInit(){}
 
@@ -16,12 +20,12 @@ export class AppComponent implements OnInit{
     this.user = parametroUsuario.value
     this.pass = parametroPass.value
     if (this.user != "" && this.pass != "") {
-      alert("Bienvenido al sistema")
+      this.users = "Bienvenido: " +parametroUsuario.value
       parametroUsuario.value =''
       parametroPass.value =''
     }
     else{
-      alert('Debe ingresar los valores indicados')
+      this.users = "Debe ingresar datos"
     }
   } 
 }

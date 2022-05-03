@@ -1,15 +1,22 @@
 <!-- login -->
-<form (submit)="ingresar(usuario, password)" class="row g-3 needs-validation">
-    <div class="" id="divUser">
-        <label class="form-label" for="">Usuario</label>
-        <input type="text" placeholder="Usuario" #usuario>
-
+<body>
+  <form (submit)="ingresar(usuario, password)" class="login">
+    <div class="Usuario" id="divUser">
+      <img [src]="imagePath" class="img-fluid" />
+      <label class="form-label" for=""></label>
+      <input stringOnly type="text" placeholder="Usuario" #usuario />
     </div>
-    <div class="" id="divPassword">
-        <label class="form-label" for="">Contraseña</label>
-        <input type="password" placeholder="Contraseña" #password>
+    <div class="Password" id="divPassword">
+      <img [src]="imagePass" class="img-fluid" />
+      <label class="form-label" for=""></label>
+      <input type="password" placeholder="Contraseña" #password />
+    </div>
+
+    <div>
+      <label appResaltar for="">{{ users }}</label>
     </div>
     <div class="col-12">
-        <button class="btn btn-primary">Ingresar</button>
+      <button class="btn btn-primary">Ingresar</button>
     </div>
-</form>
+  </form>
+</body>
